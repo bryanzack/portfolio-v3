@@ -58,13 +58,16 @@ const Landing = (): JSX.Element => {
               <div className={`${bebas_neue.variable} font-sans`}>
                 <Trail open={open}>
                   {active_tab === 'about' && about.map((item, index) => (
-                      <span onClick={() => handleClick(item)} key={index}>{item}</span>
+                      <span className={"pointer-events-auto cursor-pointer"}
+                          onClick={() => handleClick(item)} key={index}>{item}</span>
                   ))}
                   {active_tab === 'tech' && tech.map((item, index) => (
-                      <span onClick={() => handleClick(item)} key={index}>{item}</span>
+                      <span className={"pointer-events-auto cursor-pointer"}
+                          onClick={() => handleClick(item)} key={index}>{item}</span>
                   ))}
                   {active_tab === 'projects' && projects.map((item, index) => (
-                      <span onClick={() => handleClick(item)} key={index}>{item}</span>
+                      <span className={"pointer-events-auto cursor-pointer"}
+                            onClick={() => handleClick(item)} key={index}>{item}</span>
                   ))}
                 </Trail>
               </div>

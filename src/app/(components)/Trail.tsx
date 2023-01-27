@@ -20,7 +20,8 @@ const Trail = ({ open, children }: Props) => {
         <>
             {trail.map(({ height, ...style}, index) => (
                 <animated.div key={index} className={'relative w-max h-[80px] leading-[80px] text-black text-[6em] font-extrabold tracking-tighter will-change-transform'} style={style}>
-                    <animated.div style={{ height }}>{items[index]}</animated.div>
+                    <animated.div className={"p-r-[0.05em] pointer-events-none"}
+                                  style={{ height }}>{items[index]}</animated.div>
                 </animated.div>
             ))}
         </>
