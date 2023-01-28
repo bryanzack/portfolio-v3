@@ -11,7 +11,9 @@ const Landing = (): JSX.Element => {
                     <TrailContainer />
                 </div>
             </div>
-            <Nav />
+            <div className={`z-5 fixed flex mb-[520px] mr-[50px] w-[540px] justify-end mix-blend-difference`}>
+                <Nav />
+            </div>
         </div>
   );
 }
