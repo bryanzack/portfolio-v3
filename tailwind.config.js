@@ -10,6 +10,7 @@ module.exports = {
     extend: {
         fontFamily: {
             sans: ['var(--font-bebas)'],
+            bebas: ['Bebas Neue', 'sans-serif'],
             montserrat: ["Montserrat", "sans-serif"]
         }
     },
