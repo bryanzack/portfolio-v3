@@ -1,6 +1,6 @@
 'use client';
 
-import Trail from "@/app/(components)/Trail";
+import Trail from "@/app/(components)/(server)/Trail";
 import {useSelector} from "react-redux";
 import {RootState} from "@/store";
 import {useEffect, useState} from "react";
@@ -17,7 +17,7 @@ const TrailContainer = () => {
         switch(item.toLowerCase()) {
             case 'cards':
                 console.log("send user to card game selection");
-                router.push('/cards/blackjack');
+                router.push('/projects/cards/blackjack');
                 // NAVIGATE TO CARDS
                 break;
             case '...':
@@ -27,7 +27,7 @@ const TrailContainer = () => {
                 break;
             case 'datadisplay':
                 console.log("send user to league project");
-                router.push('/league');
+                router.push('/projects/league');
                 // NAVIGATE TO LEAGUE
                 break;
             default:

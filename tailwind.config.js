@@ -11,7 +11,13 @@ module.exports = {
         fontFamily: {
             sans: ['var(--font-bebas)'],
             bebas: ['Bebas Neue', 'sans-serif'],
-            montserrat: ["Montserrat", "sans-serif"]
+            montserrat: ["Montserrat", "sans-serif"],
+            roboto: ["Roboto", "sans-serif"],
+        },
+        colors: {
+            cwhite: {
+                mintcream: '#F5FFFA'
+            }
         }
     },
   },

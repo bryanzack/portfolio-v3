@@ -1,12 +1,12 @@
-import Nav from "@/app/(components)/Nav";
-import TrailContainer from "@/app/(components)/TrailContainer";
+import Nav from "@/app/(components)/(client)/Nav";
+import TrailContainer from "@/app/(components)/(client)/TrailContainer";
 
 const Landing = (): JSX.Element => {
     return (
         <div className={"flex justify-center items-center h-screen w-screen bg-black"}>
             <div className={"z-2 fixed h-[470px] w-[520px] bg-white"}/>
             <div className={"z-3 absolute h-[470px] w-[520px] custom-landing-gradient"}/>
-            <div className={"z-4 flex justify-center items-center bg-white h-[470px] w-[520px] pointer-events-none mix-blend-exclusion"}>
+            <div className={"z-4 absolute flex justify-center items-center bg-white h-[470px] w-[520px] pointer-events-none mix-blend-exclusion"}>
                 <div className={"font-bebas"}>
                     <TrailContainer />
                 </div>

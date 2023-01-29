@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleHover } from "@/reducers/navSlice";
 import handleHover from "@/app/(helpers)/handleNavHover";
-import NavItem from "@/app/(components)/NavItem";
+import NavItem from "@/app/(components)/(client)/NavItem";
 import type { RootState } from "@/store";
 
 

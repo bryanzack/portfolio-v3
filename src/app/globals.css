@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    h1 {
+        @apply text-2xl;
+        @apply font-black;
+    }
+    ul {
+        @apply list-disc;
+        @apply list-outside;
+    }
+    li {
+        @apply ml-[3vw];
+    }
+    a {
+        @apply font-black;
+        @apply hover:underline;
+    }
+}
 
 .custom-landing-gradient {
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
