@@ -1,8 +1,10 @@
+import RegionSelector from "@/app/projects/league/(components)/(client)/RegionSelector";
+import SearchInput from "@/app/projects/league/(components)/(client)/SearchInput";
+import SearchButton from "@/app/projects/league/(components)/(client)/SearchButton";
+
 const LeaguePage = () => {
-    return(
-        <div className={"w-[50%] h-[50px] flex justify-center items-center bg-blue-200"}>
-            <input className={"bg-cwhite-mintcream w-[50%] h-[40px] font-roboto font-black text-[20px]"}></input>
-        </div>
+    return (
+        <></>
     );
 }
 export default LeaguePage;

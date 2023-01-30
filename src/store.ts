@@ -1,10 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import navReducer from './reducers/navSlice';
-
+import leagueReducer from './reducers/leagueSlice';
 export function makeStore() {
     return configureStore({
         reducer: {
             nav: navReducer,
+            league: leagueReducer,
         },
     })
 }

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import {ReactNode} from "react";
 import ProjectNavInfo from "@/app/projects/(components)/(client)/ProjectNavInfo";
+import SearchBar from "@/app/projects/league/(components)/(server)/SearchBar";
 
 const ProjectNav = ({ children }: { children: ReactNode}) => {
     return (
-        <div className={'absolute flex justify-center w-screen h-screen bg-black'}>
+        <div className={'absolute flex flex-col items-center w-screen h-screen bg-black'}>
             <Link href={"/"} className={"absolute h-screen w-[2vw] custom-landing-gradient right-[0px]"} />
             <ProjectNavInfo>
                 <h1>What does this do</h1>
@@ -29,6 +30,7 @@ const ProjectNav = ({ children }: { children: ReactNode}) => {
                     <li>React</li>
                 </ul>
             </ProjectNavInfo>
+            <SearchBar />
             {children}
         </div>
     );
