@@ -1,6 +1,5 @@
-import { getMatches } from "@/app/projects/league/(helpers)/matchFetches";
+import {getMatches} from "@/app/projects/league/(helpers)/matchFetches";
 import {matchNamespace} from "@/app/projects/league/(helpers)/match";
-import {ErrorResponse} from "@/app/projects/league/(helpers)/matchFetches";
 import MatchListResponse = matchNamespace.MatchListResponse;
 
 type summoner_response = {
@@ -20,9 +19,9 @@ const MatchPage = async ({ params }: { params: {region: string, name: string}}) 
             <h1 className={"text-white"}>{params.region} {params.name}</h1>
             <div className={"text-white"}>
                 <div className={"text-white"}>
-                    {(summoner_obj.puuid)
-                        ? <h1 className={"text-white"}>puuid exist</h1>
-                        : <h1 className={"text-white"}>no puuid</h1>}
+                    {(summoner_obj.data)
+                        ? <h1 className={"text-white"}>{summoner_obj.data?.puuid}</h1>
+                        : <h1 className={"text-white"}>{summoner_obj.status_code} {summoner_obj.message}</h1>}
                 </div>
             </div>
         </>

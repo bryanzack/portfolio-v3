@@ -1,20 +1,3 @@
-import translateRegion from "@/app/projects/league/(helpers)/translateRegion";
-import {matchNamespace} from "@/app/projects/league/(helpers)/match";
-
-export type ErrorResponse = {
-    message: string,
-    status_code: number,
-}
-export type SummonerResponse = {
-    accountId: string,
-    profileIconId: number,
-    revisionDate: number,
-    name: string,
-    id: string,
-    puuid: string,
-    summonerLevel: number,
-}
-
 export async function getMatches(region: string, name: string) {
     const key = process.env.RIOT_KEY;
 
@@ -24,7 +7,19 @@ export async function getMatches(region: string, name: string) {
     const summoner_json = await summoner_res.json();
 
     console.log(summoner_json);
-    return summoner_json;
+    if (!summoner_json.puuid) {
+        console.log("does not exist");
+        return {
+            message: summoner_json.status.message,
+            status_code: summoner_json.status.status_code
+        };
+    }
+
+    return {
+        message: "successful puuid fetch",
+        status_code: 200,
+        data: summoner_json,
+    };
 
     /*
     const list_endpoint = 'api.riotgames.com/lol/match/v5/matches/by-puuid';
