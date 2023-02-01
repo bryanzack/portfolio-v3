@@ -1,13 +1,12 @@
 import './globals.css'
 import Providers from "@/app/(components)/(client)/Providers";
+import {ReactNode} from "react";
 
-type Props = {
-    children: JSX.Element,
-}
-const RootLayout = ({ children }: Props) => {
+
+const RootLayout = ({children}: { children: ReactNode; }) => {
     return (
         <html lang="en">
-            {/*
+        {/*
             <head /> will contain the (components) returned by the nearest parent
             head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
           */}
@@ -19,5 +18,5 @@ const RootLayout = ({ children }: Props) => {
             </body>
         </html>
     )
-}
+};
 export default RootLayout;

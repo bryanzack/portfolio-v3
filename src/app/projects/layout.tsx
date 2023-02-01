@@ -30,8 +30,10 @@ const ProjectNav = ({ children }: { children: ReactNode}) => {
                     <li>React</li>
                 </ul>
             </ProjectNavInfo>
-            <SearchBar />
-            {children}
+            <div className={"w-[100vw] overflow-y-scroll flex flex-col items-center"}>
+                <SearchBar />
+                {children}
+            </div>
         </div>
     );
 }

@@ -27,3 +27,22 @@
     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
+
+.match {
+    opacity: 75%;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 96px;
+    width: 639px;
+    margin: 5px;
+    border-radius: 4px;
+}
+.match:hover {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}

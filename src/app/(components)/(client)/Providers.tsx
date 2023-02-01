@@ -1,11 +1,9 @@
 'use client'
 import store from '../../../store';
 import { Provider } from "react-redux";
+import {ReactNode} from "react";
 
-type Props = {
-    children: JSX.Element,
-}
-const Providers = ({ children }: Props) => {
+const Providers = ({ children }: {children: ReactNode}) => {
     return (
         <Provider store={store}>
             {children}

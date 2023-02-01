@@ -4,7 +4,7 @@ module.exports = {
       "./src/**/*.{js,ts,jsx,tsx}",
       "./app/**/*.{js,ts,jsx,tsx}",
       "./pages/**/*.{js,ts,jsx,tsx}",
-      "./(components)/**/*.{js,ts,jsx,tsx}",,
+      "./(components)/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -16,7 +16,13 @@ module.exports = {
         },
         colors: {
             cwhite: {
-                mintcream: '#F5FFFA'
+                mintcream: '#F5FFFA',
+            },
+            cred: {
+                light: '#fff1f3',
+            },
+            cblue: {
+                light: '#ecf2ff',
             }
         }
     },

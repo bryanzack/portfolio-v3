@@ -7,8 +7,9 @@ export async function getMatches(region: string, name: string) {
     // fetch summonerID
     const summoner_endpoint = 'api.riotgames.com/lol/summoner/v4/summoners/by-name';
     const summoner_url = `https://${region}.${summoner_endpoint}/${name}?api_key=${key}`
-    const summoner_res = await fetch(summoner_url);
+    const summoner_res = await fetch(summoner_url, { cache: 'no-store' });
     const summoner_json = await summoner_res.json();
+    console.log(summoner_url);
     if (!summoner_json.puuid) {
         console.log("does not exist");
         return {
@@ -20,7 +21,7 @@ export async function getMatches(region: string, name: string) {
     // fetch list of recent match ids
     const list_endpoint = 'api.riotgames.com/lol/match/v5/matches/by-puuid';
     const list_url = `https://${translateRegion(region)}.${list_endpoint}/${summoner_json.puuid}/ids?start=0&count=10&api_key=${key}`;
-    const list_res = await fetch(list_url);
+    const list_res = await fetch(list_url, { cache: 'no-store' });
     const list_json = await list_res.json();
     if (list_json.length === 0 || list_json.length === undefined) {
         return {
@@ -34,10 +35,11 @@ export async function getMatches(region: string, name: string) {
     const matches_urls = list_json.map((id: string, index: number) => (
         `https://${translateRegion(region)}.${matches_endpoint}/${id}?api_key=${key}`
     ));
-    const matches_json = await Promise.all(matches_urls.map((url: string) => fetch(url).then(res => res.json())));
+    const matches_json = await Promise.all(matches_urls.map((url: string) => fetch(url, { cache: 'no-store' }).then(res => res.json())));
     return {
         message: "Successful matches fetch",
         status_code: 200,
         data: matches_json,
+        puuid: summoner_json.puuid,
     };
 }
