@@ -8,8 +8,7 @@ const MatchPage = async ({ params }: { params: {region: string, name: string}}) 
     const matches = await getMatches(params.region, params.name);
     return (
         <>
-            <h1 className={"text-white"}>{params.region} {params.name}</h1>
-            <div className={"text-white"}>
+            <div className={"text-white relative z-15"}>
                 {matches.data &&
                     //for every match
                     matches.data.map((match: matchNamespace.Match, index) => (
@@ -17,7 +16,7 @@ const MatchPage = async ({ params }: { params: {region: string, name: string}}) 
                         match.info.participants.map((player, index) => {
                             // if player is user, render match
                             if (player.puuid === matches.puuid)
-                                return <Match win={player.win} match={match} puuid={matches.puuid}/>
+                                return <Match win={player.win} match={match} puuid={matches.puuid} region={params.region} />
                         })
                     ))}
                 {!matches.data &&

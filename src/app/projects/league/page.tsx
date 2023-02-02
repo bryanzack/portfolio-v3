@@ -1,8 +1,7 @@
-import RegionSelector from "@/app/projects/league/(components)/(client)/RegionSelector";
-import SearchInput from "@/app/projects/league/(components)/(client)/SearchInput";
-import SearchButton from "@/app/projects/league/(components)/(client)/SearchButton";
+import SearchBar from "@/app/projects/league/(components)/(server)/SearchBar";
+import {ReactNode} from "react";
 
-const LeaguePage = () => {
+const LeaguePage = ({ children }: { children: ReactNode }) => {
     return (
         <></>
     );

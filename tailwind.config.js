@@ -19,10 +19,24 @@ module.exports = {
                 mintcream: '#F5FFFA',
             },
             cred: {
-                light: '#fff1f3',
+                backdrop: '#fff1f3',
+                dark: '#E84057',
+                item: '#FFBAC3',
+                line: '#FFD8D9',
+                d: '#D31A45',
+                multikill: 'rgb(232, 64, 87)',
             },
             cblue: {
-                light: '#ecf2ff',
+                backdrop: '#ecf2ff',
+                dark: '#5383E8',
+                item: '#B3CDFF',
+                line: '#D5E3FF',
+            },
+            cgrey: {
+                text: '#758592',
+                level: 'rgb(32, 45, 55)',
+                kd: '#202D37',
+                slash: '#9AA4AF',
             }
         }
     },
