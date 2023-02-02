@@ -1,7 +1,7 @@
 import Nav from "@/app/(components)/(client)/Nav";
 import TrailContainer from "@/app/(components)/(client)/TrailContainer";
 
-const Landing = (): JSX.Element => {
+const Landing = () => {
     return (
         <div className={"flex justify-center items-center h-screen w-screen bg-black"}>
             <div className={"z-2 fixed h-[470px] w-[520px] bg-white"}/>
