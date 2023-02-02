@@ -20,13 +20,13 @@ const ProjectNav = ({ children }: { children: ReactNode}) => {
                 </ul>
                 <h1>Why did I make this</h1>
                 <ul>
-                    <li>I made this to learn more about data retrieval, dynamic routing, caching (RTK Query & cookies), and state management</li>
+                    <li>I made this to learn more about data retrieval, dynamic routing, and state management</li>
                 </ul>
                 <h1>What tools did I use</h1>
                 <ul>
-                    <li>Redux Toolkit Query (RTK Query)</li>
                     <li>Redux Toolkit</li>
                     <li>React</li>
+                    <li>Next.js</li>
                 </ul>
             </ProjectNavInfo>
             {children}

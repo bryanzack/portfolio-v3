@@ -11,7 +11,7 @@ const TrailContainer = () => {
     const active_tab = useSelector((state: RootState) => state.nav.active_tab);
     const about: string[] = ['PHOTOGRAPHY', 'PENNSTATE', 'WEBDEV', 'MUSIC'];
     const tech: string[] = ['TYPESCRIPT', 'REACTJS', 'NEXTJS', 'REDUX'];
-    const projects: string[] = ['DATADISPLAY', 'PORTFOLIO', 'CARDS', '...'];
+    const projects: string[] = ['DATADISPLAY', 'PORTFOLIO', '...'];
     const router = useRouter();
     const handleClick = (item: string) => {
         switch(item.toLowerCase()) {

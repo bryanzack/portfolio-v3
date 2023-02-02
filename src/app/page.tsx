@@ -6,8 +6,8 @@ const Landing = () => {
         <div className={"flex justify-center items-center h-screen w-screen bg-black"}>
             <div className={"z-2 fixed h-[470px] w-[520px] bg-white"}/>
             <div className={"z-3 absolute h-[470px] w-[520px] custom-landing-gradient"}/>
-            <div className={"z-4 absolute flex justify-center items-center bg-white h-[470px] w-[520px] pointer-events-none mix-blend-exclusion"}>
-                <div className={"font-bebas"}>
+            <div className={"z-4 absolute flex justify-center items-start bg-white h-[470px] w-[520px] pointer-events-none mix-blend-exclusion"}>
+                <div className={"font-bebas mt-[65px]"}>
                     <TrailContainer />
                 </div>
             </div>
