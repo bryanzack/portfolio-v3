@@ -6,4 +6,4 @@ https://www.bryanzack.com/
 
 ### Portfolio
 
-The actual portfolio is on the home page, though I did play around with data fetching techniques using Redux Toolkit Query. If you visit https://www.bryanzack.com/league, you will find that you are able to type in any League of Legends user and search their match history.
+The actual portfolio is on the home page, though I did play around with data fetching techniques using Redux Toolkit Query. If you visit https://www.bryanzack.com/projects/league, you will find that you are able to type in any League of Legends user and search their match history.
