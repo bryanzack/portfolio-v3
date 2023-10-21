@@ -11,7 +11,7 @@ const TrailContainer = () => {
     const active_tab = useSelector((state: RootState) => state.nav.active_tab);
     const about: string[] = ['PHOTOGRAPHY', 'PENNSTATE', 'WEBDEV', 'MUSIC'];
     const tech: string[] = ['TYPESCRIPT', 'REACTJS', 'NEXTJS', 'REDUX'];
-    const projects: string[] = ['DATADISPLAY', 'PORTFOLIO', '...'];
+    const projects: string[] = ['BUS TRACKING', 'DATADISPLAY', '...'];
     const router = useRouter();
     const handleClick = (item: string) => {
         switch(item.toLowerCase()) {
@@ -19,6 +19,10 @@ const TrailContainer = () => {
                 console.log("send user to card game selection");
                 router.push('/projects/cards/blackjack');
                 // NAVIGATE TO CARDS
+                break;
+            case 'bus tracking':
+                console.log('send user to transit tracker project');
+                window.open('https://pgh-transit-tracker.vercel.app/');
                 break;
             case '...':
                 console.log("send user to github");
